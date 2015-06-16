@@ -12,7 +12,7 @@
       this.collection = args.collection;
 
       this.render();
-      $('.container').html(this.el);
+      $('#content').html(this.el);
     },
 
     render: function() {

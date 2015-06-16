@@ -16,7 +16,7 @@
       this.collection = args.collection;
 
       this.render();
-      $('.container').html(this.el);
+      $('#content').html(this.el);
       // use non-jQuerified el because we don't want to dump a cached version of el on page
     },
 

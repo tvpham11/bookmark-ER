@@ -6,10 +6,11 @@
   <button>Add Bookmark</button>
 </form>
 
-<ul>
+<ul class="collection">
   {{#each bookmark}}
-    <li data-id="{{_id}}">
-      <a href="#bookmark/{{_id}}">{{title}}</a>
+    <li data-id="{{_id}}" class="collection-item">
+      <a href="#bookmark/{{_id}}">{{title}}</a><span class="badge">Visited: {{visited}}</span>
     </li>
   {{/each}}
 </ul>
+
