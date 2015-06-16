@@ -13,13 +13,18 @@
 
     routes: {
       '' : 'homePage',
-      'bookmark/:id' : 'singleBookmark'
+      'bookmark/:id' : 'singleBookmark',
+      'about': 'aboutPage'
     },
 
     homePage: function () {
       new app.Views.Main({
         collection: this.collection
       });
+    },
+
+    aboutPage: function() {
+      new app.Views.AboutView();
     },
 
     singleBookmark: function (id) {
