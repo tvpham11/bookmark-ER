@@ -5,3 +5,11 @@
   <input type="text" placeholder="Bookmark URL" id="bookmarkURL">
   <button>Add Bookmark</button>
 </form>
+
+<ul>
+  {{#each bookmark}}
+    <li data-id="{{_id}}">
+      <a href="{{url}}">{{title}}</a>
+    </li>
+  {{/each}}
+</ul>
