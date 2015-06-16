@@ -79,7 +79,7 @@ gulp.task('handlebars', function(){
     .pipe(notifyError())
     .pipe(handlebars())
     .pipe(wrap('Handlebars.template(<%= contents %>)'))
-    .pipe(declare({namespace: 'template'}))
+    .pipe(declare({namespace: 'hbs'}))
     .pipe(concat('templates.js'))
     .pipe(gulp.dest('./app/js/'));
 });
