@@ -29,7 +29,8 @@
       event.preventDefault();
 
       // Grab our form and form values
-      var form = $(event.target),
+      var self = this,
+          form = $(event.target),
           title = form.find('#bookmarkTitle').val(),
           url = form.find('#bookmarkURL').val();
 
@@ -41,7 +42,7 @@
 
       // Add instance to our collection and save to database
       this.collection.add(b).save().success(function() {
-        console.log(b, 'has been added');
+        self.render();
       })
     }
 
