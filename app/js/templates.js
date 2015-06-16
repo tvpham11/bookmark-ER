@@ -8,5 +8,5 @@ this["hbs"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<form id=\"addBookmark\">\n  <input type=\"text\" placeholder=\"Bookmark Title\" id=\"bookmarkTitle\">\n  <input type=\"text\" placeholder=\"Bookmark URL\" id=\"bookmarkURL\">\n  <button>Add Bookmark</button>\n</form>\n";
+    return "<h2>Bookmark-ER</h2>\n\n<form id=\"addBookmark\">\n  <input type=\"text\" placeholder=\"Bookmark Title\" id=\"bookmarkTitle\">\n  <input type=\"text\" placeholder=\"Bookmark URL\" id=\"bookmarkURL\">\n  <button>Add Bookmark</button>\n</form>\n";
 },"useData":true});
