@@ -1,12 +1,14 @@
-<div class="bookmark">
+<div class="bookmark panel">
 
-  <h3>{{title}}</h3>
-  <p><a href="{{url}}">{{url}}</a></p>
+  <h3>{{ title }}</h3>
+  <p><a href="{{ url }}">{{ url }}</a></p>
 
   {{#if visited}}
     <p>This has been visited</p>
   {{else}}
-    <p>This has not been visited</p>
+    <p>This has NOT been visited</p>
   {{/if}}
+
+  <button id="delete" class="alert" data-id="{{ _id }}">Delete</button>
 
 </div>
