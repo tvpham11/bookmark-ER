@@ -1,33 +1,32 @@
-;(function () {
+;(function (){
 
   'use strict';
+
   app.Routers.MainRouter = Backbone.Router.extend({
 
-    initialize: function() {
+    initialize: function (options) {
+
+      var args = options || {};
+      this.collection = args.collection;
 
     },
 
-    routes: function() {
-      'about': 'aboutPage',
-      'contact': 'contactPage',
-      'about/:name': 'singleAboutPage'
+    routes: {
+      '' : 'homePage',
+      'bookmark/:id' : 'singleBookmark'
     },
 
-    aboutPage: function() {
-      console.log('About page');
-
+    homePage: function () {
+      new app.Views.Main({
+        collection: this.collection
+      });
     },
 
-    contactPage: function() {
-      console.log('Contact page');
-
-
-    },
-
-    singleAboutPage: function() {
-      console.log('Single About page');
-
-
+    singleBookmark: function (id) {
+      new app.Views.SingleView({
+        singleId: id,
+        collection: this.collection
+      });
     }
 
   });
