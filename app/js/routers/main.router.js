@@ -15,6 +15,7 @@
       '' : 'homePage',
       'bookmark/:id' : 'singleBookmark',
       'about': 'aboutPage',
+      'edit/:id': 'editPage',
       '*path': 'errorPage'
     },
 
@@ -26,6 +27,13 @@
 
     aboutPage: function() {
       new app.Views.AboutView();
+    },
+
+    editPage: function (id) {
+      new app.Views.EditView({
+        singleId: id,
+        collection: this.collection
+      });
     },
 
     singleBookmark: function (id) {

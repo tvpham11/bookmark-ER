@@ -15,6 +15,8 @@
       var args = options || {};
       this.collection = args.collection;
 
+      // this.collection.on('add', this.render, this);
+
       this.render();
       $('.container').html(this.el);
       // use non-jQuerified el because we don't want to dump a cached version of el on page
@@ -44,6 +46,9 @@
       this.collection.add(b).save().success(function() {
         self.render();
       })
+
+      // The below fails with line 18 because there is a lag
+      // this.collection.add(b).save();
     }
 
   });
