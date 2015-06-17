@@ -25,16 +25,19 @@
     },
 
     deleteBookmark: function(event) {
+      event.preventDefault();
+
       var button = event.target;
       var modelID = $(button).data('id');
       var whichOne = this.collection.get(modelID);
 
-      whichOne.destroy().success(function(){
-        console.log('Item deleted');
-        // Message letting user know bookmark was deleted
-        // Force route - Navigate to home page
-      });
+      if(window.confirm('Do you really want to delete me?')) {
+        whichOne.destroy().success(function(){
+          app.mainRouter.navigate('', { trigger: true });
+        });
+      }
     }
+
   });
 
 }());

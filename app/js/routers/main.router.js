@@ -14,7 +14,8 @@
     routes: {
       '' : 'homePage',
       'bookmark/:id' : 'singleBookmark',
-      'about': 'aboutPage'
+      'about': 'aboutPage',
+      '*path': 'errorPage'
     },
 
     homePage: function () {
@@ -32,6 +33,10 @@
         singleId: id,
         collection: this.collection
       });
+    },
+
+    errorPage: function() {
+      $('.container').html('404 Not Found');
     }
 
   });

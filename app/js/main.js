@@ -5,7 +5,7 @@
 
   allBookmarks.fetch().done(function(){
 
-    new app.Routers.MainRouter({
+    app.mainRouter = new app.Routers.MainRouter({
       collection: allBookmarks
     });
     Backbone.history.start();
